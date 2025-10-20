@@ -8,13 +8,14 @@
 
 1) To start the build, first ensure cross-compile tools are installed.
 2) Up to this markdown update, it is highly suggest to use the above distro as base.
-3) It is ximilar but official Altera U-Boot is better on stability while official provides latest patches.
+3) It is similar but official Altera U-Boot is better on stability while official provides latest patches.
    + Clone via command "git clone https://github.com/u-boot/u-boot.git"
    + or
    + Clone via command "git clone https://github.com/altera-fpga/u-boot-socfpga"
 4) After pulling, enter the directory
    + defines the cross-compile and architecture
    + setup the targeted platform via socfpga_cyclone5_defconfig
+   + Since newer build flow is introduce from official Altera U-Boot, cv_bsp_generator script is used to generate the board C files.
    + make prepare
    + make menuconfig if any modification is required
    + ensure the device-tree dts or dtsi is aligned with the board hardware
@@ -22,6 +23,8 @@
    + sudo dd if=u-boot-with-spl.sfp of=/dev/sdb1 bs=64k conv=fsync
    + cp u-boot.img SD Card boot parition
 5) If things are running smooth powering up the board should read message on serial therminal.
+
+[cv_bsp_generator](https://github.com/altera-fpga/u-boot-socfpga/tree/socfpga_v2025.07/arch/arm/mach-socfpga/cv_bsp_generator)
 
 ## Issue discovered during build
 
