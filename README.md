@@ -23,4 +23,11 @@
    + cp u-boot.img SD Card boot parition
 5) If things are running smooth powering up the board should read message on serial therminal.
 
+## Issue discovered during build
+
++ For both official and upstream before 2025.07 the PL330 DMA reset is never released on any forms.
+   + [patch](https://patchwork.ozlabs.org/project/uboot/patch/20250923181254.830-1-briansune@gmail.com/)
+   + [documentation](https://patchwork.ozlabs.org/project/uboot/patch/20251008204103.1497-1-briansune@gmail.com/)
++ For upstream uboot 2025.07 2025.10 there is a mistake on "arch/arm/mach-socfpga/misc.c"
+
 
