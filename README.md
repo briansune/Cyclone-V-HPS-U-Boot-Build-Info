@@ -1,5 +1,13 @@
 # Cyclone V HPS U-Boot Build Info
 
+## If this project is constructive, welcome to donate a drink to PayPal.
+
+<img src="images/qrcode.png" style="height:20%; width:20%">
+
+or 
+
+paypal.me/briansune
+
 ## How to Start
 
 |Distro Tested|Distro Version|
